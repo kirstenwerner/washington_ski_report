@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require './lib/washington_ski_report'
+
+WashingtonSkiReport::CLI.new.call
 
