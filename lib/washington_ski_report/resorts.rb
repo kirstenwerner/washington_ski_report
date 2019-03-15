@@ -10,6 +10,6 @@ class WashingtonSkiReport::Resorts
       @skinny = resort.values[2]
       @deets = resort.values[3]
     end 
-    @@all_snow = WashingtonSkiReport::Scraper.new.scrape_snow
+    # @@all_snow = WashingtonSkiReport::Scraper.new.scrape_snow
   end 
 end 
