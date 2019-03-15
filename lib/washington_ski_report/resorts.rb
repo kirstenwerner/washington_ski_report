@@ -1,9 +1,10 @@
 class WashingtonSkiReport::Resorts
   attr_accessor :name, :status 
   
-  WashingtonSkiReport::Scraper.new
   
   def self.all 
+    WashingtonSkiReport::Scraper.new.scrape
+
     resort = self.new 
     resort.name = "resort name"
     resort.status = "open"

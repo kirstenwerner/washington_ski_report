@@ -1,7 +1,9 @@
 class WashingtonSkiReport::Scraper
   
   def scrape 
-    doc = Nokogiri::HTML(open(https://www.onthesnow.com/washington/skireport.html))
+    doc = Nokogiri::HTML(open('http://skiwashington.com/resorts/'))
+    doc
+    binding.pry 
   end 
   
 end 
