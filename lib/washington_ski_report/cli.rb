@@ -9,7 +9,7 @@ class WashingtonSkiReport::CLI
   end 
   
   def welcome 
-    puts "Welcome to your Washington ski resort report! \n"
+    puts "Welcome to your Washington ski resort report!"
   end 
   
   def list_resorts
