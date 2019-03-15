@@ -2,13 +2,13 @@ require 'pry'
 class WashingtonSkiReport::CLI 
   
   def call 
-    welcome 
+    intro 
     list_resorts
     menu 
-    goodbye
+    outro
   end 
   
-  def welcome 
+  def intro 
     puts "Welcome to your Washington ski resort report! \n "
   end 
   
@@ -41,7 +41,7 @@ class WashingtonSkiReport::CLI
     end 
   end 
   
-  def goodbye
+  def outro
     puts "Happy skiing, ya PowderHound!"
   end 
   
