@@ -38,7 +38,17 @@ class WashingtonSkiReport::CLI
     input_2 = gets.strip 
     if input_2 == "y"
       puts @resorts[@input.to_i - 1].values[3]
+      menu_3
     elsif input_2 == "n"
+    end 
+  end 
+  
+  def menu_3
+    puts "\nWant to check the freshies?"
+    input_3 = gets.strip
+    if input_3 == "y"
+      puts "There's been (num) new snow in the last 24 hours, and (num_2) new snow in the last 72 hours!"
+      elsif input_3 == "n"
     end 
   end 
   
