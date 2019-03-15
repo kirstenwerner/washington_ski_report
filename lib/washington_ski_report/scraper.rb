@@ -23,4 +23,9 @@ class WashingtonSkiReport::Scraper
     end 
   end 
   
+  def scrape_snow
+    doc = Nokogiri::HTML(open('https://www.google.com/search?q=washington+ski+resorts&oq=washington+ski+resorts&aqs=chrome.0.69i59j69i60j0l2j69i60l2.5305j0j4&sourceid=chrome&ie=UTF-8'))
+    binding.pry
+  end 
+  
 end 
