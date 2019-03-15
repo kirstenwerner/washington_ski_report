@@ -13,21 +13,20 @@ class WashingtonSkiReport::CLI
   
   def list_resorts
     @resorts = WashingtonSkiReport::Resorts.all 
+    @resorts.each.with_index(1) do |resort, i|
+      puts "#{i}. #{resort.name} - #{resort.status}"
+    end 
   end 
   
   def menu 
     input = nil 
     while input != "exit"
-    puts "Select the resort you'd like more information about, or enter 'exit' to exit."
-    input = gets.strip
-      case input 
-      when '1' 
-        puts 'INFO ABOUT MT. BAKER'
-      when '2'
-        puts 'INFO ABOUT ALPENTAL' 
-      when '3'
-        puts 'INFO ABOUT CRYSTAL' 
-      end 
+      puts "Select the resort you'd like more information about, or enter 'exit' to exit."
+      input = gets.strip
+    
+      if input.to_i > 0 
+        puts @resorts[input -1]
+      end
     end 
   end 
   

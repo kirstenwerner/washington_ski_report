@@ -1,14 +1,13 @@
 class WashingtonSkiReport::Resorts
   
-  @@all = [] 
+  attr_accessor :name, :status 
   
   def self.all 
-    puts " 
-      1. Mt. Baker - open 
-      2. Alpental - open 
-      3. Crystal - open
-      "
-    @@all 
+    resort = self.new 
+    resort.name = "resort name"
+    resort.status = "open"
+    
+    [resort] 
   end 
   
 end 
