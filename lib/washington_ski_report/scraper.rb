@@ -10,15 +10,16 @@ class WashingtonSkiReport::Scraper
 
           name = resort.css('a').first.text 
           location_and_stats = resort.css('b').first.children.last.text
-      
+          url = resort.css('b').css('a').first['href']
+          
           las_array = location_and_stats.split((/(\d+)/))
-          location = las_array[0].gsub(", ", "")
+          location = las_array[0].gsub(", ", "").gsub(" • ", '')
           stats = las_array[1..4].join
           sas_array = specs_and_skinny.split("\n")
           deets = sas_array[1].gsub(" Specs: ", "")
           skinny = sas_array[2].gsub(" The SKInny: ", "")
       
-          @@resort_details = {:name => name, :location => location, :skinny => skinny, :deets => deets}
+          @@resort_details = {:name => name, :location => location, :skinny => skinny, :deets => deets, :url => url}
       end 
     end 
   end 
