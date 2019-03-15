@@ -28,7 +28,7 @@ class WashingtonSkiReport::CLI
         puts @resorts[@input.to_i - 1].values[2]
         menu_2
       elsif @input.to_i > @resorts.length || (@input.to_i == 0 && @input != "exit")
-        puts "Pick a real mountain, grom!"
+        puts "Don't be a grom, pick a real mountain!"
       end
     end 
   end 
