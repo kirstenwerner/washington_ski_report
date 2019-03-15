@@ -1,3 +1,4 @@
+require 'pry'
 class WashingtonSkiReport::CLI 
   
   def call 
@@ -23,9 +24,10 @@ class WashingtonSkiReport::CLI
     while input != "exit"
       puts "Select the resort you'd like more information about, or enter 'exit' to exit."
       input = gets.strip
-    
-      if input.to_i > 0 
-        puts @resorts[input -1]
+      if input.to_i > 0 && input.to_i - 1  < @resorts.length
+        puts @resorts[input.to_i - 1]
+      elsif input.to_i > @resorts.length 
+        puts "Please enter a valid selection"
       end
     end 
   end 
