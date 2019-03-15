@@ -7,7 +7,8 @@ class WashingtonSkiReport::Scraper
     url = doc.css('p').css('a').first['href']
     location_and_stats = doc.css('p').css('b').first.children.last.text
     las_array = location_and_stats.split((/(\d+)/))
-    location = 
+    location = las_array[0].gsub(", ", "")
+    stats = las_array[1..4].join
     specs_and_skinny = doc.css('p')[1].text
     sas_array = specs_and_skinny.split("\n")
     specs = sas_array[1].gsub(" Specs: ", "")
