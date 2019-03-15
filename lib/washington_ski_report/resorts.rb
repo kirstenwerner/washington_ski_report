@@ -6,7 +6,7 @@ class WashingtonSkiReport::Resorts
     WashingtonSkiReport::Scraper.new.scrape
 
     resort = self.new 
-    resort.name = "resort name"
+    resort.name = scraper.name 
     resort.status = "open"
     
     [resort] 
