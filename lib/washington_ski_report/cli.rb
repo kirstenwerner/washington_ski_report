@@ -26,7 +26,7 @@ class WashingtonSkiReport::CLI
       input = gets.strip
       if input.to_i > 0 && input.to_i - 1  < @resorts.length
         puts @resorts[input.to_i - 1]
-      elsif input.to_i > @resorts.length 
+      elsif input.to_i > @resorts.length || (input.to_i == 0 && input != "exit")
         puts "Please enter a valid selection"
       end
     end 
