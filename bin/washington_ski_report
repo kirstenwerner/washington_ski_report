@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
 require './lib/washington_ski_report'
 
 WashingtonSkiReport::CLI.new.call
