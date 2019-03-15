@@ -11,13 +11,4 @@ class WashingtonSkiReport::Resorts
       @deets = resort.values[3]
     end 
   end 
-  
-  # def self.resort_names
-  # @@all.map {|resort| @name = resort.values[0]}
-  # end 
-  
-  # def self.resort_location
-  #   @@all.map {|resort| @location = resort.values[1]}
-  # end 
-  
 end 
