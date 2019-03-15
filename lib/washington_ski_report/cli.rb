@@ -22,27 +22,28 @@ class WashingtonSkiReport::CLI
   def menu 
     @input = nil 
     while @input != "exit"
-      puts "\n Pick a mountain to get the skinny on the slopes! (or type 'exit' to exit)"
+      puts "\n Pick a mountain to get the skinny on the slopes! (or type 'exit' to bail)"
       @input = gets.strip
       if @input.to_i > 0 && @input.to_i - 1  < @resorts.length
         puts @resorts[@input.to_i - 1].values[2]
         menu_2
       elsif @input.to_i > @resorts.length || (@input.to_i == 0 && @input != "exit")
-        puts "Please enter a valid selection"
+        puts "Pick a real mountain, grom!"
       end
     end 
   end 
   
   def menu_2
-    puts "\nWant the nitty gritty deets?"
+    puts "\nWant the nitty gritty deets? (type 'y' or 'n')"
     input_2 = gets.strip 
     if input_2 == "y"
       puts @resorts[@input.to_i - 1].values[3]
+    elsif input_2 == "n"
     end 
   end 
   
   def outro
-    puts "Happy skiing, ya PowderHound!"
+      puts "Happy skiing, ya PowderHound!"
   end 
   
 end
