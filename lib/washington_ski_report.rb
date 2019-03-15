@@ -6,3 +6,4 @@ module WashingtonSkiReport
 end
 
 require_relative './washington_ski_report/cli'
+require_relative './washington_ski_report/resorts'

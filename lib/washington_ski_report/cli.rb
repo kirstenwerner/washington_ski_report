@@ -1,32 +1,38 @@
 class WashingtonSkiReport::CLI 
   
   def call 
+    welcome 
     list_resorts
     menu 
+    goodbye
+  end 
+  
+  def welcome 
+    puts "Welcome to your Washington ski resort report! \n"
   end 
   
   def list_resorts
-    puts "Welcome to your Washington ski resort report! \n"
-    puts " 
-      1. Mt. Baker - open 
-      2. Alpental - open 
-      3. Crystal - open
-      "
+    @resorts = WashingtonSkiReport::Resorts.all 
   end 
   
   def menu 
+    input = nil 
+    while input != "exit"
     puts "Select the resort you'd like more information about, or enter 'exit' to exit."
     input = gets.strip
-    while input != "exit"
       case input 
       when '1' 
-        puts ""
+        puts 'INFO ABOUT MT. BAKER'
       when '2'
-        puts '' 
+        puts 'INFO ABOUT ALPENTAL' 
       when '3'
-        puts '' 
+        puts 'INFO ABOUT CRYSTAL' 
       end 
     end 
+  end 
+  
+  def goodbye
+    puts "Happy skiing, ya PowderHound!"
   end 
   
 end
