@@ -18,7 +18,7 @@ class WashingtonSkiReport::Scraper
           deets = sas_array[1].gsub(" Specs: ", "")
           skinny = sas_array[2].gsub(" The SKInny: ", "")
       
-          resort_details = {:name => name, :location => location, :skinny => skinny, :deets => deets}
+          @@resort_details = {:name => name, :location => location, :skinny => skinny, :deets => deets}
       end 
     end 
   end 
