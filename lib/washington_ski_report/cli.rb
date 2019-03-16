@@ -38,7 +38,9 @@ class WashingtonSkiReport::CLI
     puts "\nWant the nitty gritty deets? (type 'y' or 'n')".colorize(:cyan).bold
     input_2 = gets.strip 
     if input_2 == "y"
-      puts "\n" + @resorts[@input.to_i - 1].values[3]
+      puts "\n"
+      @resorts[@input.to_i - 1].values[3].split(".").each {|fact| puts "* " + fact.strip}
+      # puts "\n" + @resorts[@input.to_i - 1].values[3]
       # WashingtonSkiReport::Resorts.url_link
       puts "\nIf you want to get even deeper in the gnar, visit " + @resorts[@input.to_i - 1].values[4].bold
       menu_3
