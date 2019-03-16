@@ -12,11 +12,11 @@ class WashingtonSkiReport::CLI
     puts "\nWelcome to your Washington ski resort report! \n ".colorize(:cyan).bold
   end 
   
-  # def list_resorts
-  #   @resorts = WashingtonSkiReport::Resorts.all
-  #   @resorts.each.with_index(1) do |resort, i|
-  #     puts "#{i}. #{resort.values[0]} - #{resort.values[1]}".colorize(:light_yellow).bold
-  #   end 
+  def list_resorts
+    @resorts = WashingtonSkiReport::Resorts.all
+    @resorts.each.with_index(1) do |resort, i|
+      puts "#{i}. #{resort.values[0]} - #{resort.values[1]}".colorize(:light_yellow).bold
+    end 
   end 
   
   def menu 
@@ -40,7 +40,7 @@ class WashingtonSkiReport::CLI
     input_2 = gets.strip 
     if input_2 == "y"
       puts "\n" + @resorts[@input.to_i - 1].values[3]
-      WashingtonSkiReport::Resorts.url_link
+      # WashingtonSkiReport::Resorts.url_link
       puts "\nIf you want to get even deeper in the gnar, visit " + @resorts[@input.to_i - 1].values[4].bold
       menu_3
     elsif input_2 == "n"
@@ -51,6 +51,7 @@ class WashingtonSkiReport::CLI
     puts "\nWant to check the freshies?".colorize(:cyan).bold
     input_3 = gets.strip
     if input_3 == "y"
+      WashingtonSkiReport::Resorts.all_snow
       puts "\nThere's been (num) new snow in the last 24 hours, and (num_2) new snow in the last 72 hours!"
       elsif input_3 == "n"
     end 

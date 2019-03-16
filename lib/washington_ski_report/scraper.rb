@@ -25,8 +25,10 @@ class WashingtonSkiReport::Scraper
   end 
   
   def scrape_snow
-    doc = Nokogiri::HTML(open('https://www.google.com/search?q=washington+ski+resorts&oq=washington+ski+resorts&aqs=chrome.0.69i59j69i60j0l2j69i60l2.5305j0j4&sourceid=chrome&ie=UTF-8'))
-    # binding.pry
+    doc = Nokogiri::HTML(open('http://www.skicentral.com/washington-skireport.html'))
+    resort_names = doc.css('div').css('a')[10..29].map.with_index {|name, i| name if i%2 == 0}
+    name = resort_names.map {|resort| resort.text if resort != nil} - [nil]
+    binding.pry
   end 
   
 end 

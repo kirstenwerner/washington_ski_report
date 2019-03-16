@@ -14,10 +14,14 @@ class WashingtonSkiReport::Resorts
     # @@all_snow = WashingtonSkiReport::Scraper.new.scrape_snow
   end 
   
-  def self.url_link
-    @@all_links = []
-    @@all.each do |resort|
-      @@all_links << resort.values[4] 
-    end
+  def self.all_snow
+    @@all_snow = WashingtonSkiReport::Scraper.new.scrape_snow
   end 
+  
+  # def self.url_link
+  #   @@all_links = []
+  #   @@all.each do |resort|
+  #     @@all_links << resort.values[4] 
+  #   end
+  # end 
 end 
