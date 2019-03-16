@@ -25,8 +25,7 @@ class WashingtonSkiReport::CLI
       puts "\nPick a mountain to get the skinny on the slopes! (or type 'exit' to bail)".colorize(:cyan).bold
       @input = gets.strip
       if @input.to_i > 0 && @input.to_i - 1  < @resorts.length
-        puts "\n" + (@resorts[@input.to_i - 1].values[0] +" - " + @resorts[@input.to_i - 1].values[1]).bold
-        # binding.pry
+        puts "\n" + (@resorts[@input.to_i - 1].values[0] +" - " + @resorts[@input.to_i - 1].values[5]).bold
         puts @resorts[@input.to_i - 1].values[2]
         menu_2
       elsif @input.to_i > @resorts.length || (@input.to_i == 0 && @input != "exit")

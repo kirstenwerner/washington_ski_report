@@ -18,8 +18,9 @@ class WashingtonSkiReport::Scraper
           sas_array = specs_and_skinny.split("\n")
           deets = sas_array[1].gsub(" Specs: ", "")
           skinny = sas_array[2].gsub(" The SKInny: ", "")
-      
-          @@resort_details = {:name => name, :location => location, :skinny => skinny, :deets => deets, :url => url}
+          
+
+          @@resort_details = {:name => name, :location => location, :skinny => skinny, :deets => deets, :url => url, :stats => stats}
       end 
     end 
   end 
@@ -28,7 +29,7 @@ class WashingtonSkiReport::Scraper
     doc = Nokogiri::HTML(open('http://www.skicentral.com/washington-skireport.html'))
     resort_names = doc.css('div').css('a')[10..29].map.with_index {|name, i| name if i%2 == 0}
     name = resort_names.map {|resort| resort.text if resort != nil} - [nil]
-    binding.pry
+    # binding.pry
   end 
   
 end 
