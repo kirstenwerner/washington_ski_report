@@ -21,7 +21,6 @@ class WashingtonSkiReport::Snow
       @forcast_weather = resort.values[10]
       @forcast_base_temp = resort.values[11]
       @forcast_summit_temp = resort.values[12]
-      # binding.pry
     end 
   end 
 end 
