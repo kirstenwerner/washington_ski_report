@@ -4,8 +4,10 @@ class WashingtonSkiReport::Resorts
 
   def self.all 
     @@all = WashingtonSkiReport::Scraper.new.scrape - [nil]
+    @@sorted_all = @@all.sort_by {|key, value| key[:name]}
+
     
-    @@all.each do |resort|
+    @@sorted_all.each do |resort|
       @name = resort.values[0]
       @location = resort.values[1]
       @skinny = resort.values[2]
