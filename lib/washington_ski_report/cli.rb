@@ -21,9 +21,11 @@ class WashingtonSkiReport::CLI
   def menu 
     @input = nil 
     while @input != "exit"
-      puts "\nPick a mountain to get the skinny on the slopes! (or type 'exit' to bail)".colorize(:cyan).bold
+      puts "\nPick a mountain to get the skinny on the slopes! (or type 'list' to see your mountain options again, or 'exit' to bail)".colorize(:cyan).bold
       @input = gets.strip
-      if @input.to_i > 0 && @input.to_i - 1  < @resorts.length
+      if @input == 'list'
+        list_resorts
+      elsif @input.to_i > 0 && @input.to_i - 1  < @resorts.length
         puts "\n" + (@resorts[@input.to_i - 1].values[0] +" - " + @resorts[@input.to_i - 1].values[5]).bold
         puts @resorts[@input.to_i - 1].values[2]
         menu_2
@@ -46,7 +48,7 @@ class WashingtonSkiReport::CLI
   end 
   
   def menu_3
-    puts "\nWant to check the freshies?".colorize(:cyan).bold
+    puts "\nWant to check the freshies? (type 'y' or 'n')".colorize(:cyan).bold
     input_3 = gets.strip
     if input_3 == "y"
       @snow_report = WashingtonSkiReport::Snow.all 
