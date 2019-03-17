@@ -52,7 +52,7 @@ class WashingtonSkiReport::CLI
     puts "\nWant to check the freshies?".colorize(:cyan).bold
     input_3 = gets.strip
     if input_3 == "y"
-      WashingtonSkiReport::Resorts.all_snow
+      WashingtonSkiReport::Snow.all 
       puts "\nThere's been (num) new snow in the last 24 hours, and (num_2) new snow in the last 72 hours!"
       elsif input_3 == "n"
     end 

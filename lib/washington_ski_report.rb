@@ -7,3 +7,4 @@ require_relative "washington_ski_report/version"
 require_relative './washington_ski_report/scraper'
 require_relative './washington_ski_report/cli'
 require_relative './washington_ski_report/resorts'
+require_relative './washington_ski_report/snow'

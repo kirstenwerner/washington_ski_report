@@ -55,6 +55,6 @@ class WashingtonSkiReport::Scraper
       
       @i += 1 
     end 
-    binding.pry
+    @@gnar_details
   end 
 end 
