@@ -1,8 +1,6 @@
 # WashingtonSkiReport
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/washington_ski_report`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+WashingtonSkiReport allows the user to view a list of all of the ski resorts in Washington State, and to select to view more information about each resort, such as a bio, details about the resort, and weather/snow conditions where available.
 
 ## Installation
 
