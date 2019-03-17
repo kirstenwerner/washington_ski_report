@@ -8,7 +8,7 @@ class WashingtonSkiReport::Scraper
       specs_and_skinny = resort.text
       if resort.css('a').length > 0  && resort.css('b').length > 0 && specs_and_skinny.include?("Specs:")
 
-          name = resort.css('a').first.text 
+          name = resort.css('a').first.text.gsub("°", "") 
           location_and_stats = resort.css('b').first.children.last.text
           url = resort.css('b').css('a').first['href']
           
@@ -52,9 +52,9 @@ class WashingtonSkiReport::Scraper
       forcast_summit_temp = doc_url.css('table').css('td')[31].text
       
       @@gnar_details << {:name => name_array[@i], :new_snow => new_snow, :new_snow_detail => new_snow_detail, :season_total => season_total, :surface_conditions => surface_conditions, :secondary_surface_conditions => secondary_surface_conditions, :base_depth => base_depth, :runs_open => runs_open, :lifts_open => lifts_open, :percent_open => percent_open, :forcast_weather => forcast_weather, :forcast_base_temp => forcast_base_temp, :forcast_summit_temp => forcast_summit_temp}
-      # binding.pry
       @i += 1 
     end 
+    # binding.pry 
     @@gnar_details
   end 
 end 
