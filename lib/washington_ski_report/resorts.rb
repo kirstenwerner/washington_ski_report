@@ -4,6 +4,7 @@ class WashingtonSkiReport::Resorts
 
   def self.all 
     @@all = WashingtonSkiReport::Scraper.new.scrape - [nil]
+    
     @@all.each do |resort|
       @name = resort.values[0]
       @location = resort.values[1]
