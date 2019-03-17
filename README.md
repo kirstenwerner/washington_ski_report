@@ -20,7 +20,80 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ♥ bin/washington_ski_report```
+
+```Welcome to your Washington ski resort report!
+
+1. 49 North - Chewelah
+2. Badger Mountain Ski Hill - Waterville
+3. Bluewood - Dayton
+4. Crystal Mountain - Enumclaw
+5. Echo Valley - Chelan
+6. Hurricane Ridge - Port Angeles
+7. Leavenworth Ski Hill - Leavenworth
+8. Loup Loup Ski Bowl - Omak
+9. Meany Ski Lodge - via Crystal Springs Sno-Park
+10. Mission Ridge - Wenatchee
+11. Mt. Baker - Bellingham
+12. Mt. Spokane - Spokane
+13. Sitzmark Ski Mountain - Tonasket
+14. Stevens Pass - Skykomish
+15. The Summit at Snoqualmie - Snoqualmie Pass
+16. White Pass - White Pass
+
+Pick a mountain to get the skinny on the slopes! (or type 'list' to see your mountain options again, or 'exit' to bail)```
+
+enter your selection, and get a description! 
+
+```1
+
+49 North - 1500 skiable acres on 1851′ vertical
+One of the Northwest’s best ski areas for families. Unlike a mega-resort, everything funnels down to a common base area…it’s easy to find the other members of your group. 49° North offers a super-short chair for the skiers who started yesterday, a slightly longer chair for developing skiers, and even a couple runs offthe summit that virtually any skier could handle. Grandma and the kids can cruise Silver Ridge, while Mom and Dad can venture in and out of the trees without going too far afield. Eastern skiers can think of 49° North as a western version of Vermont’s Bromley. But that really isn’t a big drawback, because this isn’t the type of ski area where you’re hurried to go from peak to peak and ring up thevertical. In fact 49° North is on a major upgrade program, recently adding the Sunrise Quad and 12 trails at Sunrise Basin, as well as six new trails and some gladed runs in the terrain west of Chair 4. The resort is planning to build the Angel Peak trails and glades next. Folks, this is quickly becoming a big time ski area.
+
+Want the nitty gritty deets? (type 'y' or 'n')```
+
+type 'y' and see: 
+
+```y
+
+* Summit elevation: 5774′; Base elevation: 3923′
+* 6 Lifts: 1 quad, 4 doubles, 1 surface
+* Uphill capacity: 6600/hr
+* Terrain Mix: 30-40-30
+* Longest Run: 13,000′
+* Season: usually late November to early April; closed Weds/Thurs except duringChristmas holidays
+* Rentals & Lessons
+* Annual Snowfall: 300″
+
+If you want to get even deeper in the gnar, visit http://www.ski49n.com/
+
+Want to check the freshies? (type 'y' or 'n')``` 
+
+type 'y' and see: 
+
+```y
+
+49 North
+NEW SNOW:                              7 day total: 4"
+NEW SNOW DETAILS:                      Tue Mar 12   - 2", Mon Mar 11   - 2"
+TOTAL SNOW FOR THE SEASON SO FAR:      214"
+BASE DEPTH:                            127-168"
+SURFACE CONDITIONS:                    Packed Powder
+SECONDARY SURFACE CONDITIONS:          Machine Groomed
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+RUNS OPEN:                             82 out of 89
+LIFTS OPEN:                            5 out of 7
+PERCENT OPEN:                          92%
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+WEATHER FORCAST:                       Mostly Clear
+FORCAST BASE TEMPERATURE:              51 F
+FORCAST SUMMIT TEMPERATURE:
+
+Pick a mountain to get the skinny on the slopes! (or type 'list' to see your mountain options again, or 'exit' to bail)
+```
+
+enter 'exit' to quit!
+
 
 ## Development
 
