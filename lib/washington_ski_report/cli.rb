@@ -55,27 +55,30 @@ class WashingtonSkiReport::CLI
     if input_3 == "y"
       @snow_report = WashingtonSkiReport::Snow.all 
       @snow_report_resorts = []
-      @snow_report.each do |resort| 
-        @snow_report_resorts << resort.values[0] 
+      
+      @snow_report.each.with_index do |resort, i| 
+        @snow_report_resorts << resort.values[0]
       end 
       
-      if @snow_report_resorts.include?(@resorts[@input.to_i - 1].values[0]) == true 
-        puts "NEW SNOW:                              " + @snow_report[@input.to_i - 1].values[1] 
-        puts "NEW SNOW DETAILS:                      " + @snow_report[@input.to_i - 1].values[2] 
-        puts "TOTAL SNOW FOR THE SEASON SO FAR:      " + @snow_report[@input.to_i - 1].values[3] 
-        puts "BASE DEPTH:                            " + @snow_report[@input.to_i - 1].values[6] 
-        puts "SURFACE CONDITIONS:                    " + @snow_report[@input.to_i - 1].values[4] 
-        puts "SECONDARY SURFACE CONDITIONS:          " + @snow_report[@input.to_i - 1].values[5] 
+      if @snow_report_resorts.include?(@resorts[@input.to_i - 1].values[0]) == true
+        input_4 = @snow_report_resorts.index{|x| x == @resorts[@input.to_i - 1].values[0]}
+        puts "\n" + @snow_report[input_4].values[0]
+        puts "NEW SNOW:                              " + @snow_report[input_4].values[1] 
+        puts "NEW SNOW DETAILS:                      " + @snow_report[input_4].values[2] 
+        puts "TOTAL SNOW FOR THE SEASON SO FAR:      " + @snow_report[input_4].values[3] 
+        puts "BASE DEPTH:                            " + @snow_report[input_4].values[6] 
+        puts "SURFACE CONDITIONS:                    " + @snow_report[input_4].values[4] 
+        puts "SECONDARY SURFACE CONDITIONS:          " + @snow_report[input_4].values[5] 
         puts "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-        puts "RUNS OPEN:                             " + @snow_report[@input.to_i - 1].values[7] 
-        puts "LIFTS OPEN:                            " + @snow_report[@input.to_i - 1].values[8] 
-        puts "PERCENT OPEN:                          " + @snow_report[@input.to_i - 1].values[9] 
+        puts "RUNS OPEN:                             " + @snow_report[input_4].values[7] 
+        puts "LIFTS OPEN:                            " + @snow_report[input_4].values[8] 
+        puts "PERCENT OPEN:                          " + @snow_report[input_4].values[9] 
         puts "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-        puts "WEATHER FORCAST:                       " + @snow_report[@input.to_i - 1].values[10] 
-        puts "FORCAST BASE TEMPERATURE:              " + @snow_report[@input.to_i - 1].values[11] 
-        puts "FORCAST SUMMIT TEMPERATURE:            " + @snow_report[@input.to_i - 1].values[12] 
+        puts "WEATHER FORCAST:                       " + @snow_report[input_4].values[10] 
+        puts "FORCAST BASE TEMPERATURE:              " + @snow_report[input_4].values[11] 
+        puts "FORCAST SUMMIT TEMPERATURE:            " + @snow_report[input_4].values[12] 
       else 
-        puts "Sorry, dude, info not available"
+        puts "\nSorry, dude, info not available"
       end 
       elsif input_3 == "n"
     end
