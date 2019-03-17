@@ -40,7 +40,9 @@ class WashingtonSkiReport::CLI
     input_2 = gets.strip 
     if input_2 == "y"
       puts "\n"
-      @resorts[@input.to_i - 1].values[3].split(".").each {|fact| puts "* " + fact.strip}
+      resort_details = @resorts[@input.to_i - 1].values[3].split(".") - [" "]
+      resort_details.each {|fact| puts "* " + fact.strip}
+      # binding.pry
       puts "\nIf you want to get even deeper in the gnar, visit " + @resorts[@input.to_i - 1].values[4].bold
       menu_3
     elsif input_2 == "n"
