@@ -63,6 +63,7 @@ class WashingtonSkiReport::CLI
       if @snow_report_resorts.include?(@resorts[@input.to_i - 1].values[0]) == true
         input_4 = @snow_report_resorts.index{|x| x == @resorts[@input.to_i - 1].values[0]}
         puts "\n" + @snow_report[input_4].values[0]
+        
         puts "NEW SNOW:                              " + @snow_report[input_4].values[1] 
         puts "NEW SNOW DETAILS:                      " + @snow_report[input_4].values[2] 
         puts "TOTAL SNOW FOR THE SEASON SO FAR:      " + @snow_report[input_4].values[3] 

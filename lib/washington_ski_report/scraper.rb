@@ -66,9 +66,16 @@ class WashingtonSkiReport::Scraper
            @forcast_summit_temp = doc_url.css('table').css('td')[i + 1].text
          end 
        end 
-       binding.pry
 
-      @@gnar_details << {:name => name_array[@i], :new_snow => @new_snow, :new_snow_detail => @new_snow_detail, :season_total => @season_total, :surface_conditions => @surface_conditions, :secondary_surface_conditions => @secondary_surface_conditions, :base_depth => @base_depth, :runs_open => @runs_open, :lifts_open => @lifts_open, :percent_open => @percent_open, :forcast_weather => @forcast_weather, :forcast_base_temp => @forcast_base_temp, :forcast_summit_temp => @forcast_summit_temp}
+      @gnar_details = {:name => corrected_name_array[@i], :new_snow => @new_snow, :new_snow_detail => @new_snow_detail, :season_total => @season_total, :surface_conditions => @surface_conditions, :secondary_surface_conditions => @secondary_surface_conditions, :base_depth => @base_depth, :runs_open => @runs_open, :lifts_open => @lifts_open, :percent_open => @percent_open, :forcast_weather => @forcast_weather, :forcast_base_temp => @forcast_base_temp, :forcast_summit_temp => @forcast_summit_temp}
+      
+      @gnar_details.each do |key, value| 
+        if value == nil
+          @gnar_details[key] = "-"
+        end
+      end
+
+      @@gnar_details << @gnar_details
       @i += 1 
     end 
     @@gnar_details
